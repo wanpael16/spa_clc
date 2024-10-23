@@ -1,4 +1,6 @@
+//ESTE DOCUMENTO ES COMO UN AYUDANTE DE LA CONSTRUCCION DEL LAYOUT DE LA APLICACION
 import { Html, Head, Main, NextScript } from "next/document";
+
 
 export default function Document() {
   return (
@@ -9,8 +11,9 @@ export default function Document() {
         <meta name="Keywords" content="Clasificados Next"/>
         <meta name="author" content="andres@gmail.com"/> */}
         </Head> 
-      <body className="antialiased">
-        <Main />
+      <body className="antialiased" >
+        <Main  />
+       
         {/* archivos script */}
         <NextScript />
       </body>

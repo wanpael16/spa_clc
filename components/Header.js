@@ -1,42 +1,51 @@
 import Image from "next/image";
+import styles from "../styles/style.module.css";
+
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Header = () => {
+  // init Swiper:
+  const swiper = new Swiper(".swiper", {
+    // configure Swiper to use modules
+    modules: [Navigation, Pagination],
+  });
+
   return (
-   <>
-    <div className="flex flex-col h-svh">
-   <header className=" p-4 ">
+    <>
+      <header className="contenedor-header">
+        {/* <div className={styles.imageContainer}>
+          <Image
+            src="/img/doctor-nurses-special-equipment.jpg" // Cambia por la ruta de tu imagen
+            alt="Imagen de fondo"
+            fill={true}
+            style={{ objectFit: "cover" }}
+            priority={true} // Para optimizar la carga de la imagen
+          />
+        </div> */}
 
-   <Image
-          src="/img/doctor_banner.png"  // Cambia por la ruta de tu imagen
-          alt="Imagen de fondo"
-          fill={true}
-          style={{ objectFit: 'cover'}} 
-          priority={true}  // Para optimizar la carga de la imagen
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
           
-      />
+          </div>
 
-    <nav className="top-0 left-0 w-full  absolute bg-black bg-opacity-30"  >
-    <div className="text-lg h-[15rem]">Mi Sitio</div>
-          <ul className="hidden md:flex space-x-4">
-            <li><a href="#" className="hover:underline">Inicio</a></li>
-            <li><a href="#" className="hover:underline">Servicios</a></li>
-            <li><a href="#" className="hover:underline">Contacto</a></li>
-          </ul>
-    </nav>
+          <div class="swiper-pagination"></div>
 
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
 
-      
-   
-            {/* <h1 className="text-red-600">asfds</h1>
-            <Image src="/img/logo_clc_blanco.png" alt="clc_logo" width={150} height="150"   priority/>
-            <h1>Header</h1> */}
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </header>
+    </>
+  );
+};
 
-
-    </header>
-
-    </div>
-   </>
-  )
-}
-
-export default Header
+export default Header;
