@@ -11,4 +11,19 @@
   display: grid;
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
+  position: relative;
 }
+
+.contenedor-header{
+width: 100%;
+height: 250px;
+
+
+}
+
+/* .Swiper-content{
+  background: red;
+  width: 100%;
+height: 250px;
+position: relative;
+} */
