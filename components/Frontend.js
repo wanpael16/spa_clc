@@ -11,7 +11,7 @@ const Frontend = ({ children, title }) => {
         <title>{`Clasificacion Next - ${title}`}</title>
       </Head>
       <Header />
-      <div className="contenedor-principal">{children}</div>
+      <div className="container-general">{children}</div>
       <Footer />
     </>
   );

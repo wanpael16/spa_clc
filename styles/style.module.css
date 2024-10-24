@@ -1,7 +1,1 @@
-.imageContainer {
-    position: relative; /* Cambia esto para que sea relative, absolute o fixed */
-    width: 100%; /* Ajusta según sea necesario */
-    height: 500px; /* Ajusta según sea necesario */
-    overflow: hidden; /* Para ocultar cualquier parte que sobresalga */
-}
 
