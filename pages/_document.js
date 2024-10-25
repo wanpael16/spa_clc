@@ -12,9 +12,12 @@ export default function Document() {
         <meta name="author" content="andres@gmail.com"/> */}
         </Head> 
       <body className="antialiased" >
+        
         <Main  />
        
         {/* archivos script */}
+
+       
         <NextScript />
       </body>
     </Html>

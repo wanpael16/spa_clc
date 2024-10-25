@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 
 import Image from "next/image";
-import styles from "../styles/style.module.css";
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,7 +21,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="contenedor-header ">
+      <header className="container-header">
         <Swiper
           style={{
             "--swiper-navigation-color": "#171717",
@@ -37,7 +36,6 @@ const Header = () => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
           onAutoplayTimeLeft={onAutoplayTimeLeft}
-          className="Swiper-style"
         >
           <SwiperSlide>
             <div className="SwiperSlide__imageContainer">
@@ -70,17 +68,30 @@ const Header = () => {
           </div>
         </Swiper>
 
-        <div className=" contain-nav">
-          <div className="container-general contain-nav-start">
-            <div className="contain-nav-start__image-Container">
-              <img src="/img/logoBlanco.png" alt="" />
-            </div>
-            <div className="contain-nav-start__contain-info-contact">
-              <div className="info-attention">
-                <img src="/img/clock-countdown.png" alt="" />
-
-                <span>Lunes a Domingo</span>
+        <div className="contain-nav">
+          <div>
+            <div className="main-container contain-nav-start">
+              <div className="contain-nav-start__image-Container">
+                <img src="/img/logoBlanco.png" alt=""  />
               </div>
+              <div className="contain-nav-start__contain-info-contact">
+                <div className="info-attention">
+                  <img src="/img/clock-countdown.png" alt="" />
+
+                  <div className="info-attention__hours">
+                 
+                  <span>Lunes a Domingo</span><span>24horas</span>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="main-container contain-nav-end">
+              <ul>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+              </ul>
             </div>
           </div>
         </div>

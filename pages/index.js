@@ -17,9 +17,11 @@ import Frontend from "@/components/Frontend";
 export default function Home() {
   return (
    <>
+   
      <Frontend title={'Inicio'}>
       <h1 className="text-red-700"> Hola mundo desde Nextjs</h1>
      </Frontend>
+     
    </>
   );
 }
