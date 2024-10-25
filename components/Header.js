@@ -71,28 +71,59 @@ const Header = () => {
         <div className="contain-nav">
           <div>
             <div className="main-container contain-nav-start">
-              <div className="contain-nav-start__image-Container">
-                <img src="/img/logoBlanco.png" alt=""  />
+              <div className="contain-nav-start__image-Container-logo">
+                <img src="/img/logoBlanco.png" alt="" />
               </div>
-              <div className="contain-nav-start__contain-info-contact">
-                <div className="info-attention">
-                  <img src="/img/clock-countdown.png" alt="" />
-
-                  <div className="info-attention__hours">
-                 
-                  <span>Lunes a Domingo</span><span>24horas</span>
-                  
+              <div className="contenedor-info">
+                <div className="contain-contact">
+                  <div className="contain-contact__img">
+                    <img src="/img/clock-countdown.png" alt="" />
                   </div>
+
+                  <div className="contain-contact__hours">
+                    <span>Lunes a Domingo</span>
+                    <span>24horas</span>
+                  </div>
+                </div>
+
+                <div className="contain-phone">
+                  <div className="contain-phone__img">
+                    <img src="/img/phone.png" alt="" />
+                  </div>
+
+                  <div className="contain-phone__numbers">
+                    <span>(073) 331811 - (073) 363576</span>
+                    <span>Central Telefónica</span>
+                  </div>
+                </div>
+                <div className="contain-social-networks">
+                  <div className="contain-social-networks__img">
+                    <img src="/img/facebook_logo.svg" alt="" className="ab" />
+                    <img src="/img/facebook_logo.svg" alt="" />
+                  </div>
+
+                 
                 </div>
               </div>
             </div>
-            <div className="main-container contain-nav-end">
-              <ul>
-                <li>asd</li>
-                <li>asd</li>
-                <li>asd</li>
-              </ul>
-            </div>
+           
+           <nav className="main-container contain-nav-end">
+            <ul>
+              <li>Nosotros</li>
+              <li>Servicios</li>
+              <li>Staff Médico</li>
+              <li>Especialidades</li>
+            </ul>
+         
+             <div>
+             <button className="contain-nav-end__button">
+              <img src="/img/calendar-dots.png" alt="" />
+             <span>RESERVAR CITA</span></button>
+             </div>
+           
+            
+           </nav>
+          
           </div>
         </div>
       </header>

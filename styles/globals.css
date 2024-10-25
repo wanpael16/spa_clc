@@ -10,7 +10,6 @@
   --background-secundario: rgb(0, 72, 154);
 }
 
-
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -20,7 +19,7 @@
 .SwiperSlide__imageContainer {
   position: relative; /* Cambia esto para que sea relative, absolute o fixed */
   width: 100%; /* Ajusta según sea necesario */
-  height: 500px; /* Ajusta según sea necesario */
+  height: 80dvh; /* Ajusta según sea necesario */
   overflow: hidden; /* Para ocultar cualquier parte que sobresalga */
 }
 
@@ -56,10 +55,8 @@
 
 /* style nev content */
 .container-header {
-  /* grid-area: header; */
   position: relative;
   width: 100%;
-
 }
 
 .contain-nav {
@@ -67,62 +64,135 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(22, 22, 22, 0.1);
+  background: rgba(37, 37, 37, 0.2);
   backdrop-filter: blur(2px);
   width: 100%;
-  height: 200px;
+  height: 250px;
   z-index: 50;
   display: flex;
   flex-direction: column;
- justify-content: center;
-
+  justify-content: end;
+}
+ 
+.contain-nav-start {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
 
-.contain-nav-start__image-Container{
-width: 200px;
-height: 5em;
+.contain-nav-start__image-Container-logo {
+  width: 250px;
+  height: 5.5em;
+  display: flex;
+  align-items: center;
 }
 
-.contain-nav-start__image-Container img{
+.contain-nav-start__image-Container-logo img {
   width: 100%;
   height: 4em;
 }
 
-.contain-nav-start {
-  display: flex;
-  justify-content: space-between;
-  /* background: red; */
-  align-items: center;
-  font-size: 0.8em;
-  overflow: hidden;
-}
-
-
-
-
-.info-attention img{
-width: 20px;
-height: 20px;
-}
-.info-attention{
-  width: 150px;
-  height: 50px;
+.contenedor-info{
+  width: 380px;
   display: flex;
 
+ 
+  
 }
 
-.info-attention__hours  span {
-display: block;
-width: 150px;
-height: 20px;
-margin: 0;
-padding: 0;
-
-
-/* background: red; */
+.contain-contact {
+  width: 140px;
+  height: 30px;
+  display: flex;
 }
+
+.contain-phone {
+  width: 200px;
+  height: 30px;
+  display: flex;
+}
+
+.contain-contact img , .contain-phone img{
+  width: 20px;
+  height: 20px;
+}
+
+
+.contain-contact__img, .contain-phone__img {
+  align-self: center;
+}
+
+.contain-contact__hours , .contain-phone__numbers {
+  margin-left: 5px;
+}
+
+.contain-contact__hours span, .contain-phone__numbers span {
+  display: block;
+  width: auto;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+}
+.contain-contact__hours span:last-child ,.contain-phone__numbers  span:last-child {
+  line-height: 0.3;
+  text-align: center;
+}
+
+
+
 
 .contain-nav-end {
-  
-  /* background: green; */
+  display: flex;
+ justify-content: space-between;
+}
+
+.contain-nav-end ul{
+  display: flex;
+
+}
+.contain-nav-end ul li{
+  margin: 20px;
+}
+
+.contain-nav-end__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 40px;
+  background-color: var(--background-primario);
+  border-radius: 5px;
+}
+
+.contain-nav-end__button img{
+  margin-right: 5px;
+  width: 1.4em;
+  height: 1.4em;
+}
+
+
+.contain-social-networks__img img{
+  width: 20px;
+  height: 20px;
+}
+
+.contain-social-networks{
+width: 50px;
+/* background-color: red; */
+}
+
+.contain-social-networks__img {
+  display: flex;
+}
+
+.contain-social-networks__img img {
+  width: 25px;
+  height: 25px;
+}
+
+.contain-social-networks__img-facebook{
+  margin-right: 5px;
 }
