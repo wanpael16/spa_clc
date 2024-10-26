@@ -5,30 +5,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --background-progress: #000000;
+  --background-progress:rgb(240, 240, 240);
   --background-primario: rgb(150, 184, 19);
   --background-secundario: rgb(0, 72, 154);
 }
 
-#__next{
-display:grid !important;
-min-height: 100vh;
-grid-template-columns: minmax(150px, 1fr);
-grid-template-rows: 400px 1fr 50px;
-/* 
-grid-template-areas: 
-  "header"
-  "content"
-  "footer"
-; */ 
+#__next {
+  display: grid !important;
+  min-height: 100vh;
+  grid-template-columns: minmax(150px, 1fr);
+  grid-template-rows: 720px 1fr 50px;
 }
 
 /* Style Swiper */
 .SwiperSlide__imageContainer {
-  position: relative; /* Cambia esto para que sea relative, absolute o fixed */
-  width: 100%; /* Ajusta según sea necesario */
-  height: 500px; /* Ajusta según sea necesario */
-  overflow: hidden; /* Para ocultar cualquier parte que sobresalga */
+  position: relative;
+  height: 500px;
+  overflow: hidden;
 }
 
 .autoplay-progress {
@@ -69,16 +62,14 @@ grid-template-areas:
   transform-origin: center;
 }
 
-/* .main-container{
-  min-width: 1200px; 
+.main-container {
+  min-width: 80%;
   margin: 0 auto;
- background-color: red;
- 
-} */
+  /* background-color: red; */
+}
 
-
-.container-header{
-position: relative;
+.container-header {
+  position: relative;
 }
 
 .contain-nav {
@@ -86,166 +77,172 @@ position: relative;
   position: absolute;
   top: 0;
   left: 0;
+
+  width: 100%;
+  height: 700px;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr);
+  grid-template-rows: 200px 400px ;
+  /* background: yellow; */
+ 
+  /* background-color: red; */
+}
+
+.grid-nav-start{
   background: rgba(37, 37, 37, 0.2);
   backdrop-filter: blur(2px);
-  width: 100%;
-  height: 250px;
-  z-index: 50;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
 }
+
+.grid-nav-start_contain-nav{
+ width: 80%;
+ margin: 0 auto;
  
-.contain-nav-start {
-  /* display: flex; */
-  width: 150px;
-  /* justify-content: space-between;
-  align-items: center;
-  font-size: 0.8em;
-  overflow: hidden;
-  margin-bottom: 50px; */
-}
-
-/* 
-
-
-.contain-nav-start__image-Container-logo {
-  width: 250px;
-  height: 5.5em;
-  display: flex;
-  align-items: center;
-}
-
-.contain-nav-start__image-Container-logo img {
-  width: 100%;
-  height: 4em;
-}
-
-.contenedor-info{
-  width: 380px;
-  display: flex;
-
- 
-  
-}
-
-.contain-contact {
-  width: 140px;
-  height: 30px;
-  display: flex;
-}
-
-.contain-phone {
-  width: 200px;
-  height: 30px;
-  display: flex;
-}
-
-.contain-contact img , .contain-phone img{
-  width: 20px;
-  height: 20px;
-}
-
-
-.contain-contact__img, .contain-phone__img {
-  align-self: center;
-}
-
-.contain-contact__hours , .contain-phone__numbers {
-  margin-left: 5px;
-}
-
-.contain-contact__hours span, .contain-phone__numbers span {
-  display: block;
-  width: auto;
-  height: 20px;
-  margin: 0;
-  padding: 0;
-}
-.contain-contact__hours span:last-child ,.contain-phone__numbers  span:last-child {
-  line-height: 0.3;
-  text-align: center;
 }
 
 
 
+
+/* Style nav start */
+.contain-nav-start,
+.contain-nav-end {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px;
+}
 
 .contain-nav-end {
+  margin: 15px 0;
+}
+.contain-nav-start {
+  margin: 50px 0;
+}
+
+.contain-nav-start__image-Container-logo {
+  width: 200px;
+}
+
+.contenedor-info {
   display: flex;
- justify-content: space-between;
+  justify-content: end;
+  gap: 20px;
+}
+.contain-contact__img,
+.contain-phone__img {
+  align-content: center;
 }
 
-.contain-nav-end ul{
-  display: flex;
-
-}
-.contain-nav-end ul li{
-  margin: 20px;
-}
-
-.contain-nav-end__button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 180px;
-  height: 40px;
-  background-color: var(--background-primario);
-  border-radius: 5px;
-}
-
-.contain-nav-end__button img{
-  margin-right: 5px;
-  width: 1.4em;
-  height: 1.4em;
-}
-
-
-.contain-social-networks__img img{
-  width: 20px;
-  height: 20px;
-}
-
-.contain-social-networks{
-width: 50px;
-
-}
-
-.contain-social-networks__img {
-  display: flex;
-}
-
-.contain-social-networks__img img {
+.contain-contact__img img,
+.contain-phone__img img {
   width: 25px;
   height: 25px;
 }
-
-.contain-social-networks__img-facebook{
-  margin-right: 5px;
+.contain-contact,
+.contain-phone {
+  display: flex;
+  height: 40px;
+  /* background-color: red; */
+  gap: 5px;
 }
- */
 
+.contain-contact__hours,
+.contain-phone__numbers {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
-/* style nev content */
-/* .container-header {
-  position: relative;
-  width: 100% ;
+.contain-contact__hours > :nth-child(2),
+.contain-phone__numbers > :nth-child(2) {
+  line-height: 0.5;
+}
+
+/* Style nav end */
+.contain-nav-end > ul {
+  display: flex;
+  height: 40px;
+  /* background-color: red; */
+  gap: 20px;
+  align-items: center;
+}
+
+.contain-nav-end > div {
+  display: flex;
+  justify-content: end;
+  height: 40px;
+
+  /* background-color: green; */
+}
+.contain-nav-end__button {
+  display: flex;
+  background-color: var(--background-primario);
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  gap: 5px;
+}
+
+.contain-nav-end__button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Style grid-nav-end */
+.grid-nav-end{
+
+}
+
+.service-nav{
+  display: grid;
+  grid-template-columns: 1fr 550px;
+ grid-template-rows: 400px;
+  /* background: red; */
+}
+.service-nav-content{
+  grid-column: 2/3;
+  /* background: green; */
+  height: 450px;
+ align-content: center;
  
-} */
-
-/* .container-header{
-grid-area: header;
 }
 
+.content-service{
+  display: grid;
+  height: 80%;
+  grid-template-columns:  repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  /* background-color: aquamarine; */
+  /* border-radius: 10px; */
 
-*/
-.container-footer{
-  /* grid-area: footer; */
-  /* display: flex;
- flex-wrap: wrap;
-  width: 1200px; 
-  margin: 0 auto;
- background-color: red; */
- min-width: 80%;
- margin: 0 auto;
- background-color: red;
+}
+
+.content-service__caja{
+  border: 0.1px solid rgb(216, 216, 216);
+  background: rgba(12, 12, 12, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.content-service :nth-child(2), .content-service :nth-child(4){
+  border-left:none;
+}
+
+.content-service__caja{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.content-service__caja-groud img{
+  width: 80px;
+  height: 80px;
+}
+
+.content-service__caja-groud{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
 }
