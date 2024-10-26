@@ -38,7 +38,7 @@ const Header = () => {
           onAutoplayTimeLeft={onAutoplayTimeLeft}
         >
           <SwiperSlide>
-            <div className="SwiperSlide__imageContainer">
+           
               <Image
                 src="/img/doctor-nurses-special-equipment.jpg" // Cambia por la ruta de tu imagen
                 alt="Imagen de fondo"
@@ -46,10 +46,10 @@ const Header = () => {
                 style={{ objectFit: "cover" }}
                 priority={true} // Para optimizar la carga de la imagen
               />
-            </div>
+          
           </SwiperSlide>
           <SwiperSlide>
-            <div className="SwiperSlide__imageContainer">
+            
               <Image
                 src="/img/doctor-nurses-special-equipment.jpg" // Cambia por la ruta de tu imagen
                 alt="Imagen de fondo"
@@ -57,7 +57,7 @@ const Header = () => {
                 style={{ objectFit: "cover" }}
                 priority={true} // Para optimizar la carga de la imagen
               />
-            </div>
+           
           </SwiperSlide>
 
           <div className="autoplay-progress">
@@ -68,9 +68,9 @@ const Header = () => {
           </div>
         </Swiper>
 
-        <div className="contain-nav">
-          <div>
-            <div className="main-container contain-nav-start">
+        <div className=" contain-nav">
+          <div className="main-container">
+            <div className="contain-nav-start">
               <div className="contain-nav-start__image-Container-logo">
                 <img src="/img/logoBlanco.png" alt="" />
               </div>
@@ -96,18 +96,18 @@ const Header = () => {
                     <span>Central Telefónica</span>
                   </div>
                 </div>
-                <div className="contain-social-networks">
+                {/* <div className="contain-social-networks">
                   <div className="contain-social-networks__img">
                     <img src="/img/facebook_logo.svg" alt="" className="ab" />
                     <img src="/img/facebook_logo.svg" alt="" />
                   </div>
 
                  
-                </div>
+                </div> */}
               </div>
             </div>
            
-           <nav className="main-container contain-nav-end">
+           {/* <nav className="contain-nav-end">
             <ul>
               <li>Nosotros</li>
               <li>Servicios</li>
@@ -122,7 +122,7 @@ const Header = () => {
              </div>
            
             
-           </nav>
+           </nav> */}
           
           </div>
         </div>

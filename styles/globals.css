@@ -10,16 +10,24 @@
   --background-secundario: rgb(0, 72, 154);
 }
 
-.main-container {
-  max-width: 1200px;
-  margin: 0 auto;
+#__next{
+display:grid !important;
+min-height: 100vh;
+grid-template-columns: minmax(150px, 1fr);
+grid-template-rows: 400px 1fr 50px;
+/* 
+grid-template-areas: 
+  "header"
+  "content"
+  "footer"
+; */ 
 }
 
 /* Style Swiper */
 .SwiperSlide__imageContainer {
   position: relative; /* Cambia esto para que sea relative, absolute o fixed */
   width: 100%; /* Ajusta según sea necesario */
-  height: 80dvh; /* Ajusta según sea necesario */
+  height: 500px; /* Ajusta según sea necesario */
   overflow: hidden; /* Para ocultar cualquier parte que sobresalga */
 }
 
@@ -52,11 +60,25 @@
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
-
-/* style nev content */
-.container-header {
-  position: relative;
+.swiper {
+  height: 100%;
   width: 100%;
+}
+.swiper .swiper-pagination-bullet-active {
+  transform: scale(2);
+  transform-origin: center;
+}
+
+/* .main-container{
+  min-width: 1200px; 
+  margin: 0 auto;
+ background-color: red;
+ 
+} */
+
+
+.container-header{
+position: relative;
 }
 
 .contain-nav {
@@ -75,13 +97,17 @@
 }
  
 .contain-nav-start {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  width: 150px;
+  /* justify-content: space-between;
   align-items: center;
   font-size: 0.8em;
   overflow: hidden;
-  margin-bottom: 50px;
+  margin-bottom: 50px; */
 }
+
+/* 
+
 
 .contain-nav-start__image-Container-logo {
   width: 250px;
@@ -181,7 +207,7 @@
 
 .contain-social-networks{
 width: 50px;
-/* background-color: red; */
+
 }
 
 .contain-social-networks__img {
@@ -195,4 +221,31 @@ width: 50px;
 
 .contain-social-networks__img-facebook{
   margin-right: 5px;
+}
+ */
+
+
+/* style nev content */
+/* .container-header {
+  position: relative;
+  width: 100% ;
+ 
+} */
+
+/* .container-header{
+grid-area: header;
+}
+
+
+*/
+.container-footer{
+  /* grid-area: footer; */
+  /* display: flex;
+ flex-wrap: wrap;
+  width: 1200px; 
+  margin: 0 auto;
+ background-color: red; */
+ min-width: 80%;
+ margin: 0 auto;
+ background-color: red;
 }
