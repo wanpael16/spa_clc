@@ -122,9 +122,17 @@ const Header = () => {
           <div className="grid-nav-end main-container">
             <div className="service-nav">
               
+              
+              <div className="service-nav__info">
+                  
+                  <h3 className="service-nav__info-h3">CONFÍA EN LOS LIDERES EN ALTA COMPLEJIDAD</h3>
+                  <p className="service-nav__info-p">Para asegurarte de que estás haciendo la mejor elección.</p>
+                  <button className="service-nav__info-botton">Conoce más</button>
+              </div>
+
               <div className="service-nav-content">
 
-                <div className="content-service content-service--filter">
+                <div className="content-service">
                   <div className="content-service__caja">
                     
                     <div className="content-service__caja-groud">
